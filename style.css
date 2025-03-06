@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background: rgb(239, 233, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  position: relative;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+}
+.menu li:hover {
+  background-color: #dde1f9;
+  border-radius: 15px;
+  border: 1px solid #dde1f9;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0f0f34;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+.submenu-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.submenu-menu .column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.submenu-menu h4 {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.submenu-menu a {
+  font-size: 14px;
+  padding: 8px 0;
+  color: #222;
+  transition: color 0.3s ease-in-out;
+}
+
+.submenu-menu a:hover {
+  color: #007bff;
+}
+
+.submenu:hover .submenu-menu {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+}
+
+.action a {
+  text-decoration: none;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.login {
+  color: #222;
+}
+.signup {
+  color: #222;
+}
+.signup:hover {
+  background: #0f0f34;
+  color: white;
+}
+.login:hover {
+  background: #0f0f34;
+  color: white;
+}
